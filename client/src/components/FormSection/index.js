@@ -7,8 +7,10 @@ const FormSection = () => {
   const [email, setEmail] = useState('');
   const [message, setMessage] = useState('');
 
+  const API_URI = process.env.API_URI;
+
   const axiosInstance = axios.create({
-    baseURL: process.env.API_URI || 'http://localhost:8080',
+    baseURL: API_URI || 'http://localhost:8080',
     crossDomain: true,
     });
 
