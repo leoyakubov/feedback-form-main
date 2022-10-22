@@ -9,10 +9,10 @@ const FormSection = () => {
   const [message, setMessage] = useState('');
   
 
-  //const API_URI = process.env.API_URI;
+  const API_URI = process.env.API_URI;
 
   const axiosInstance = axios.create({
-    baseURL: 'https://feedback-form-demo.herokuapp.com',
+    baseURL: API_URI || 'http://localhost:8080',
     crossDomain: true,
     });
 
