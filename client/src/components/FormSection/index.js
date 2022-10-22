@@ -7,10 +7,14 @@ const FormSection = () => {
   const [email, setEmail] = useState('');
   const [message, setMessage] = useState('');
 
+  const axiosInstance = axios.create({
+    baseURL: process.env.API_URI || 'http://localhost:8080'
+    });
+
   const submitUserData = async (e) => {
     e.preventDefault();
     try {
-      await axios.post((process.env.API_URI || 'http://localhost:8080') + '/store-data', {
+      await axiosInstance.post('/store-data', {
         name: name,
         email: email,
         message: message
