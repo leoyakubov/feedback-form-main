@@ -1,15 +1,13 @@
 import { useState } from 'react';
 import axios from 'axios';
 import { Form, Input, Button, Textarea, Title } from '../StyledFormComponents';
-//require('dotenv').config({ path: './.env' });
 
 const FormSection = () => {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [message, setMessage] = useState('');
   
-
-  const API_URI = process.env.API_URI;
+  const API_URI = process.env.REACT_APP_API_URI;
 
   const axiosInstance = axios.create({
     baseURL: API_URI || 'http://localhost:8080',
