@@ -10,7 +10,7 @@ const FormSection = () => {
   const submitUserData = async (e) => {
     e.preventDefault();
     try {
-      await axios.post('http://localhost:8080/store-data', {
+      await axios.post(process.env.API_URI + '/store-data'|| 'http://localhost:8080/store-data', {
         name: name,
         email: email,
         message: message,
