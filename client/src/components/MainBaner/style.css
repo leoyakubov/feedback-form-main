@@ -1,0 +1,13 @@
+.baner {
+  width: 1440px;
+  background-image: url('../../assets/center-yellow.svg'),
+    url('../../assets/center-pink.svg'),
+    url('../../assets/cloud.svg'), 
+    url('../../assets/top-left.svg'), 
+    url('../../assets/ellipse.svg'),
+    url('../../assets/map.svg');
+    
+  background-position: 763.21px 515.93px, 761.67px 558.15px, left center, 29.09px 22.88px, 714px 21px, right top;
+  background-repeat: no-repeat, no-repeat, no-repeat, no-repeat, no-repeat;
+  padding-bottom: 200px;
+}

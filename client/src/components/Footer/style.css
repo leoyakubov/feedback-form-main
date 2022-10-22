@@ -1,0 +1,7 @@
+.footer {
+  width: 1440px;
+  height: 200px;
+  background-image: url('../../assets/circle-footer.svg'), url('../../assets/footer.svg');
+  background-position: left bottom, left top;
+  background-repeat: no-repeat, no-repeat;
+}
