@@ -2,9 +2,9 @@ const mysql = require('mysql2');
 
 const connection = mysql.createConnection({
   host: process.env.CLEARDB_DATABASE_URL || 'localhost',
-  user: 'root',
-  password: 'test123',
-  database: 'feedbackform_db'
+  user: process.env.CLEARDB_DATABASE_USER || 'root',
+  password: process.env.CLEARDB_DATABASE_PASSWORD || 'test123',
+  database: process.env.CLEARDB_DATABASE_DB || 'feedbackform_db'
 });
 
 connection.connect((err) => {
