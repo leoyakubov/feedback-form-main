@@ -8,7 +8,8 @@ const FormSection = () => {
   const [message, setMessage] = useState('');
 
   const axiosInstance = axios.create({
-    baseURL: process.env.API_URI
+    baseURL: process.env.API_URI || 'http://localhost:8080',
+    crossDomain: true,
     });
 
   const submitUserData = async (e) => {
