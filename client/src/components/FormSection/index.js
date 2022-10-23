@@ -12,6 +12,9 @@ const FormSection = () => {
   const axiosInstance = axios.create({
     baseURL: API_URI || 'http://localhost:8080',
     crossDomain: true,
+    headers: {
+      'Content-Type': 'application/json',
+    }
     });
 
   const submitUserData = async (e) => {
